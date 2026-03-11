@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUTU DESIGN 2026 AIGC 视觉与电商实战突击营 - 斩获高薪Offer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        accent: '#10b981'
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 3s ease infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darker text-slate-300 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card border-b-0 border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3 cursor-pointer">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20">
+                        <i class="fa-solid fa-wand-magic-sparkles text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">YOUTU <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">DESIGN</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#course-modules" class="text-sm font-medium hover:text-white transition-colors">实战模块</a>
+                    <a href="#tools" class="text-sm font-medium hover:text-white transition-colors">核心工具</a>
+                    <a href="#target-audience" class="text-sm font-medium hover:text-white transition-colors">适合人群</a>
+                </div>
+                <div>
+                    <button onclick="openModal()" class="bg-white text-darker font-bold py-2.5 px-6 rounded-full hover:bg-slate-200 transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                        抢占内测名额
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-primary/30 text-primary text-sm font-medium mb-8 animate-float">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                </span>
+                2026 全新升级 | 告别纸上谈兵，直击商业落地
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-8 leading-tight">
+                AIGC 视觉与电商 <br class="hidden md:block"/>
+                <span class="bg-gradient-to-r from-primary via-secondary to-pink-500 text-gradient animate-gradient-x">实战突击营</span>
+            </h1>
+            
+            <p class="mt-4 text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                专为<span class="text-white font-semibold">大学生/应届生/转行者</span>打造。不用再啃枯燥理论，直接用最前沿的 AI 工具链解决排版、精修、视频剪辑的真实工作损耗，全流程打造直接能拿去面试的高薪作品集！
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button onclick="openModal()" class="w-full sm:w-auto bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg py-4 px-8 rounded-full hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all transform hover:-translate-y-1">
+                    获取课程大纲与试听课 <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+                <a href="#course-modules" class="w-full sm:w-auto glass-card text-white font-medium text-lg py-4 px-8 rounded-full hover:bg-slate-800 transition-all">
+                    向下探索实战内容
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-10">
+                <div>
+                    <div class="text-3xl font-bold text-white mb-1">5+</div>
+                    <div class="text-sm text-slate-500">核心商业项目交付</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white mb-1">90%</div>
+                    <div class="text-sm text-slate-500">缩减常规作图时间</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white mb-1">1v1</div>
+                    <div class="text-sm text-slate-500">作品集导师精批</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white mb-1">100%</div>
+                    <div class="text-sm text-slate-500">直击企业招聘需求</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Course (Pain Points) -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">打破传统设计的内卷僵局</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">还在为了抠图换背景熬夜？还在发愁没有昂贵的影棚拍不出高质感主图？AI 时代，工具即是降维打击的武器。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pain point 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors">
+                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-400 text-2xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">告别低效人肉加班</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        传统改稿修图耗时费力。在这里，掌握 AI 批量出图与自动化排版，将原本需要一天的套版工作压缩至 10 分钟。
+                    </p>
+                </div>
+                <!-- Pain point 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-secondary/50 transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 text-secondary text-2xl relative z-10">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 relative z-10">终结高昂实拍成本</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed relative z-10">
+                        零成本搭建虚拟影棚。用 ComfyUI 和 ControlNet 彻底解决商品完美换背景、光影重构与数字模特换装难题。
+                    </p>
+                </div>
+                <!-- Pain point 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-accent/50 transition-colors">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 text-accent text-2xl">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">填补岗前技能断层</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        学校教理论，企业要实战。我们的课程产出直接对标企业真实项目，带你做出一份让 HR 无法拒绝的实战作品集。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modules -->
+    <section id="course-modules" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm">核心课程架构</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">5大实战模块，打造全能链路</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">我们不讲宽泛的理论，每节课都对应一个具体的商业产出物，确保学完就能接单干活。</p>
+            </div>
+
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                
+                <!-- Module 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        1
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform border-l-4 border-l-primary">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-building text-2xl text-primary"></i>
+                            <h3 class="text-2xl font-bold text-white">企业级品牌视觉与营销全案</h3>
+                        </div>
+                        <ul class="text-slate-400 mb-5 text-sm leading-relaxed space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-primary mt-1 mr-2"></i>
+                                <span><strong>大促 KV 与全渠道裂变：</strong>对齐大厂业务流！掌握 S 级营销主视觉 (KV) 生成公式，利用 AI 无损放大与智能排版，极速裂变 30+ 种渠道尺寸（Banner、App开屏、线下展板）。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-primary mt-1 mr-2"></i>
+                                <span><strong>品牌 DNA 锁定与版权安全：</strong>运用 ControlNet 与风格参考（sref），确保品牌 Logo、标准色绝对统一（无畸变）。结合 Adobe Firefly 构建 100% 商业无侵权风险的安全素材库。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-primary mt-1 mr-2"></i>
+                                <span><strong>实体包装与 3D 提案级交付：</strong>突破二维限制，将 AI 设计的平面图案/纹理，一键转化为带镭射、压纹工艺的高保真 3D 包装提案图，秒杀传统设计竞标。</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">Midjourney KV</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">Adobe Firefly (商用合规)</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">云端 3D 渲染</span>
+                        </div>
+                        <div class="bg-darker/50 p-3 rounded-lg border border-slate-700/50">
+                            <span class="text-accent text-xs font-bold uppercase"><i class="fa-solid fa-check-circle mr-1"></i> 实操交付：</span>
+                            <span class="text-slate-300 text-sm ml-2">含 KV、多尺寸延展、3D包装效果图的企业营销全案一套</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        2
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform border-l-4 border-l-secondary">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-gem text-2xl text-secondary"></i>
+                            <h3 class="text-2xl font-bold text-white">跨平台电商主图与 AI 虚拟外模</h3>
+                        </div>
+                        <ul class="text-slate-400 mb-5 text-sm leading-relaxed space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-secondary mt-1 mr-2"></i>
+                                <span><strong>亚马逊 A+ 图与场景渲染：</strong>完美攻克 Amazon 严格的纯白底主图规范，并利用 AI 将单品极速融入各类欧美真实生活场景（副图/场景图），提升转化率。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-secondary mt-1 mr-2"></i>
+                                <span><strong>淘宝/天猫高点击率光影：</strong>摒弃假图感！利用 ComfyUI (IC-Light) 重建产品真实物理倒影与环境光，打造秒杀同行的“高溢价”视觉点击率（CTR）主图。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-secondary mt-1 mr-2"></i>
+                                <span><strong>零成本 AI 外模换装：</strong>跨境服装类目杀手锏。利用 Flux.1 与骨骼绑定技术，将平铺衣服一键穿到不同肤色、身形的 AI 外模身上，省下十几万跨国拍摄费。</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">ComfyUI 换装</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">IC-Light 光影</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">亚马逊副图实战</span>
+                        </div>
+                        <div class="bg-darker/50 p-3 rounded-lg border border-slate-700/50">
+                            <span class="text-accent text-xs font-bold uppercase"><i class="fa-solid fa-check-circle mr-1"></i> 实操交付：</span>
+                            <span class="text-slate-300 text-sm ml-2">Amazon 合规图组 + 淘宝高转化主图 + 高写实 AI 模特换装换景图</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        3
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform border-l-4 border-l-pink-500">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-layer-group text-2xl text-pink-500"></i>
+                            <h3 class="text-2xl font-bold text-white">淘宝长图与亚马逊 A+ 详情页量产</h3>
+                        </div>
+                        <ul class="text-slate-400 mb-5 text-sm leading-relaxed space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span><strong>跨语种卖点提炼与文案：</strong>投喂产品手册给大语言模型，一键生成抓人眼球的国内电商痛点文案，或精准地道的 Amazon 英语五点描述（Bullet Points）。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span><strong>多 SKU 批量无损换色：</strong>针对电商海量 SKU，掌握 ComfyUI 批量流，实现同款产品一键精准换色、换图案，彻底告别重复性渲染劳动。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span><strong>双平台自动化排版切图：</strong>结合 Figma / PS 自动化布局，将生成的图文极速拼装为符合淘宝无限下拉逻辑的营销长图，或符合亚马逊规格的 A+ 图文模块。</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">LLM 智能文案</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">批量套版</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">A+ 模块布局</span>
+                        </div>
+                        <div class="bg-darker/50 p-3 rounded-lg border border-slate-700/50">
+                            <span class="text-accent text-xs font-bold uppercase"><i class="fa-solid fa-check-circle mr-1"></i> 实操交付：</span>
+                            <span class="text-slate-300 text-sm ml-2">淘宝高转化超长详情页 1 套 + Amazon 英文 A+ 页面 1 套</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        4
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform border-l-4 border-l-blue-400">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-video text-2xl text-blue-400"></i>
+                            <h3 class="text-2xl font-bold text-white">抖音/TK 短视频与淘宝主图动态化</h3>
+                        </div>
+                        <ul class="text-slate-400 mb-5 text-sm leading-relaxed space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-blue-400 mt-1 mr-2"></i>
+                                <span><strong>静态主图一键转视频：</strong>迎合淘宝/亚马逊主图视频化趋势。利用 Gen-3 / Kling 大模型，让静态产品图产生惊艳的光影流转与物理运镜（如推拉摇移、水花飞溅）。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-blue-400 mt-1 mr-2"></i>
+                                <span><strong>高完播率带货短视频：</strong>专攻抖音与 TikTok。将 AI 生成的动态素材，搭配智能爆款文案、多语种 AI 真人配音、卡点音乐与吸睛字幕，极速量产跨境与国内带货短视频。</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">Runway Gen-3</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">Kling AI</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">剪映/CapCut 出海</span>
+                        </div>
+                        <div class="bg-darker/50 p-3 rounded-lg border border-slate-700/50">
+                            <span class="text-accent text-xs font-bold uppercase"><i class="fa-solid fa-check-circle mr-1"></i> 实操交付：</span>
+                            <span class="text-slate-300 text-sm ml-2">高质感产品展示主图视频 + 抖音/TikTok 爆款带货短视频</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-900 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        5
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform border-l-4 border-l-emerald-500">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-rocket text-2xl text-emerald-500"></i>
+                            <h3 class="text-2xl font-bold text-white">岗前冲刺：高薪作品集与大厂面试通关</h3>
+                        </div>
+                        <ul class="text-slate-400 mb-5 text-sm leading-relaxed space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-emerald-500 mt-1 mr-2"></i>
+                                <span><strong>精准狙击“平面/电商”双岗位：</strong>抛弃学生气的临摹排版。针对电商美工，突出作品的“高转化率”与“零成本模特换装”优势；针对平面设计，包装你的“品牌全案统筹”与“极速裂变”能力。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-emerald-500 mt-1 mr-2"></i>
+                                <span><strong>HR 最爱的数据化包装：</strong>教你如何给作品写“商业故事”。利用“缩短 80% 出图周期”、“省下数万元实拍预算”、“CTR 点击率提升”等核心量化指标，对传统竞争者进行降维打击。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-caret-right text-emerald-500 mt-1 mr-2"></i>
+                                <span><strong>真实企业机考与面试模拟：</strong>利用大模型模拟真实电商/广告公司的上机实操考核（如：要求1小时内用 AI 产出一套天猫双11主图），并针对“AIGC协同工作流”等高频面试痛点进行 1v1 话术演练。</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">对口岗位定制</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">ROI数据化包装</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs rounded-md border border-slate-700 text-slate-300">机考模拟通关</span>
+                        </div>
+                        <div class="bg-darker/50 p-3 rounded-lg border border-slate-700/50">
+                            <span class="text-accent text-xs font-bold uppercase"><i class="fa-solid fa-check-circle mr-1"></i> 实操交付：</span>
+                            <span class="text-slate-300 text-sm ml-2">1 份碾压同行的商业级求职作品集 + 导师 1v1 简历精修辅导</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience (Personalized info) -->
+    <section id="target-audience" class="py-20 bg-darker border-y border-slate-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzMzQxNTUiIGZpbGwtb3BhY2l0eT0iMC4xNSI+PHBhdGggZD0iTTM2IDM0djIwaC0ydi0yMGgtMjB2LTJoMjB2LTIwaDJ2MjBoMjB2MnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">这门课，专门为你设计</h2>
+                    <p class="text-slate-400 text-lg mb-8">无论你是面临毕业大考的学生，还是渴望弯道超车的职场新人，AIGC 是你跨越经验鸿沟的最强武器。</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-4">
+                                <i class="fa-solid fa-graduation-cap text-primary text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">在校大学生 / 应届毕业生</h4>
+                                <p class="text-slate-400 text-sm mt-1">缺少大厂实习经历？拿不出像样的商业作品？我们带你用 AI 跑通全流程，毕业即拥有比肩三年工作经验的神级作品集，碾压同龄竞聘者。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center mt-1 mr-4">
+                                <i class="fa-solid fa-rotate text-secondary text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">零基础 / 职业转行人群</h4>
+                                <p class="text-slate-400 text-sm mt-1">没有美术功底？不会传统 C4D 或手绘？不用怕。AI 工具抹平了技法门槛，你的审美和提示词逻辑就是你的核心竞争力，轻松跨入高薪视觉设计行业。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center mt-1 mr-4">
+                                <i class="fa-solid fa-store text-pink-500 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">电商运营 / 独立创业者</h4>
+                                <p class="text-slate-400 text-sm mt-1">想要极致降本增效。自己动手用 AI 搞定主图、详情页和短视频，省下高昂的外包设计费和模特拍摄费，实现一个人就是一支军队。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="glass-card p-2 rounded-2xl">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="rounded-xl object-cover w-full h-[400px] opacity-80 hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Tools -->
+    <section id="tools" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-12">精通 2026 核心 AI 工具生态矩阵</h2>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <div class="glass-card px-6 py-4 rounded-xl flex items-center gap-3">
+                    <i class="fa-solid fa-ship text-2xl text-slate-300"></i>
+                    <span class="text-white font-bold tracking-wider">Midjourney</span>
+                </div>
+                <div class="glass-card px-6 py-4 rounded-xl flex items-center gap-3">
+                    <i class="fa-solid fa-project-diagram text-2xl text-blue-400"></i>
+                    <span class="text-white font-bold tracking-wider">ComfyUI</span>
+                </div>
+                <div class="glass-card px-6 py-4 rounded-xl flex items-center gap-3">
+                    <i class="fa-solid fa-font text-2xl text-emerald-400"></i>
+                    <span class="text-white font-bold tracking-wider">Ideogram 2.0</span>
+                </div>
+                <div class="glass-card px-6 py-4 rounded-xl flex items-center gap-3">
+                    <i class="fa-brands fa-figma text-2xl text-pink-500"></i>
+                    <span class="text-white font-bold tracking-wider">Figma AI</span>
+                </div>
+                <div class="glass-card px-6 py-4 rounded-xl flex items-center gap-3">
+                    <i class="fa-solid fa-video text-2xl text-purple-400"></i>
+                    <span class="text-white font-bold tracking-wider">Gen-3 / Kling</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-0"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">不要在应该用 AI 飞奔的年代，选择人肉拉车</h2>
+            <p class="text-xl text-slate-300 mb-10">首期内测营限招 50 人。早一天掌握 AI 工作流，早一天拿到高薪入场券。</p>
+            <button onclick="openModal()" class="bg-white text-darker font-extrabold text-xl py-5 px-12 rounded-full hover:bg-slate-200 transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+                立即抢占内测名额 / 领试听课
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                    <i class="fa-solid fa-wand-magic-sparkles text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold text-white tracking-tight">YOUTU DESIGN</span>
+            </div>
+            <div class="text-center md:text-left">
+                <p class="text-slate-500 text-sm mb-2">
+                    &copy; 2026 YOUTU DESIGN AIGC 视觉实战培训. 助力大学生与转行者实现高薪就业. All rights reserved.
+                </p>
+                <p class="text-slate-400 text-sm font-medium">
+                    <i class="fa-solid fa-phone mr-1 text-primary"></i> 官方咨询热线：<a href="tel:18018796460" class="hover:text-primary transition-colors">180-1879-6460</a>
+                </p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-weixin"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Sign Up / CTA -->
+    <div id="signupModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-md bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl p-8 transform transition-all scale-95 opacity-0 duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-times text-xl"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30">
+                    <i class="fa-solid fa-gift text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">领取大纲与试听资料</h3>
+                <p class="text-slate-400 text-sm">填写下方信息，YOUTU DESIGN 课程助教将在 24 小时内为您发送完整的课程 PDF 大纲与免费试听录播课。</p>
+            </div>
+            
+            <form onsubmit="submitForm(event)" class="space-y-4">
+                <div>
+                    <input type="text" placeholder="您的姓名或昵称" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors placeholder-slate-500">
+                </div>
+                <div>
+                    <input type="tel" placeholder="微信 / 手机号" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors placeholder-slate-500">
+                </div>
+                <div>
+                    <select class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors appearance-none">
+                        <option value="" disabled selected class="text-slate-500">请选择您的当前身份</option>
+                        <option value="student">在校大学生 / 应届生</option>
+                        <option value="career_change">零基础 / 寻求转行</option>
+                        <option value="ecommerce">电商从业者 / 运营</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg py-3 rounded-lg mt-4 hover:shadow-lg hover:shadow-primary/30 transition-all">
+                    立即提交领取
+                </button>
+            </form>
+            
+            <div id="successMessage" class="hidden text-center mt-4">
+                <p class="text-emerald-400 font-medium"><i class="fa-solid fa-check-circle mr-1"></i> 提交成功！助教将尽快与您联系。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal and Interaction -->
+    <script>
+        const modal = document.getElementById('signupModal');
+        const modalContent = document.getElementById('modalContent');
+        const successMessage = document.getElementById('successMessage');
+        const form = document.querySelector('form');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Trigger animation
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                // Reset form on close
+                form.reset();
+                form.style.display = 'block';
+                successMessage.classList.add('hidden');
+            }, 300);
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent actual form submission
+            // Simulate API call
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 提交中...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                
+                // Auto close after 3 seconds
+                setTimeout(() => {
+                    closeModal();
+                }, 3000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
